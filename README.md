@@ -752,7 +752,7 @@
     <!-- Horarios -->
     <section id="horarios">
       <div class="section-header">
-        <h2>Horarios Académicos</h2>
+        <h2>Horarios Tecnicos</h2>
       </div>
       
       <div class="schedule-tabs">
@@ -834,6 +834,130 @@
         </div>
       </div>
     </section>
+
+    <!-- Sección Formulario de Matrícula -->
+        <section id="formulario-matricula" class="section">
+            <h2 class="section-title">FORMULARIO DE MATRÍCULA</h2>
+            
+            <div class="enrollment-center">
+                <h3 id="selected-specialty-title">Selecciona una especialidad</h3>
+                <p class="intro-text" id="selected-specialty-desc">
+                    Completa el formulario para aplicar a la especialidad seleccionada.
+                </p>
+                
+                <form class="enrollment-form" id="enrollment-form">
+                    <div class="form-section">
+                        <h4>📋 Datos Personales</h4>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="nombre">Nombre completo *</label>
+                                <input type="text" id="nombre" name="nombre" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cedula">Cédula de identidad *</label>
+                                <input type="text" id="cedula" name="cedula" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="fecha_nacimiento">Fecha de nacimiento *</label>
+                                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="telefono">Teléfono *</label>
+                                <input type="tel" id="telefono" name="telefono" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Correo electrónico *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="direccion">Dirección completa *</label>
+                                <textarea id="direccion" name="direccion" rows="3" required></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h4>🎓 Datos Académicos</h4>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="colegio_anterior">Colegio de procedencia *</label>
+                                <input type="text" id="colegio_anterior" name="colegio_anterior" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="promedio">Promedio del año anterior *</label>
+                                <input type="number" id="promedio" name="promedio" min="0" max="100" step="0.01" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="especialidad_interes">Especialidad de interés *</label>
+                                <select id="especialidad_interes" name="especialidad_interes" required>
+                                    <option value="">Selecciona una especialidad</option>
+                                    <option value="desarrollo-web">💻 Desarrollo Web</option>
+                                    <option value="banca-finanzas">🏦 Banca y Finanzas</option>
+                                    <option value="contabilidad">📊 Contabilidad</option>
+                                    <option value="gestion-administrativa">📋 Gestión Administrativa</option>
+                                    <option value="construccion-civil">🏗 Construcción Civil</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="experiencia_tecnica">Experiencia técnica previa</label>
+                                <textarea id="experiencia_tecnica" name="experiencia_tecnica" rows="3" placeholder="Describe cualquier experiencia técnica o cursos relacionados"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h4>👨‍👩‍👧‍👦 Datos de Emergencia</h4>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="contacto_emergencia">Nombre del contacto de emergencia *</label>
+                                <input type="text" id="contacto_emergencia" name="contacto_emergencia" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="telefono_emergencia">Teléfono de emergencia *</label>
+                                <input type="tel" id="telefono_emergencia" name="telefono_emergencia" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="parentesco">Parentesco *</label>
+                                <select id="parentesco" name="parentesco" required>
+                                    <option value="">Selecciona parentesco</option>
+                                    <option value="padre">Padre</option>
+                                    <option value="madre">Madre</option>
+                                    <option value="tutor">Tutor legal</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h4>📄 Documentos Requeridos</h4>
+                        <div class="documents-checklist">
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="documentos[]" value="cedula" required>
+                                <span>Cédula de identidad (original y copia)</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="documentos[]" value="certificado" required>
+                                <span>Certificado de notas del año anterior</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="documentos[]" value="domicilio" required>
+                                <span>Comprobante de domicilio</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="documentos[]" value="foto" required>
+                                <span>Fotografía tamaño pasaporte</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn-secondary" onclick="showSection('matriculas')">← Volver a Matrículas</button>
+                        <button type="submit" class="btn-primary">Enviar Solicitud de Matrícula</button>
+                    </div>
+                </form>
+            </div>
+        </section>
 
     <!-- Galería -->
     <section id="galeria">
